@@ -13,7 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import sheridan.sullnich.assignment3.ui.theme.Assignment3Theme
 
-class MainActivity : ComponentActivity() {
+class AppRootScreen : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
