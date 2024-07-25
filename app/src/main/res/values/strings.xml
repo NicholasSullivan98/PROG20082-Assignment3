@@ -1,5 +1,25 @@
-<resources>
-    <string name="app_name">Assignment3</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">To Do List</string>
 
     <string name="back_button">Back</string>
+    <string name="item_details_title">Item Details</string>
+    <string name="edit_item_title">Edit Item</string>
+    <string name="item_entry_title">Add Item</string>
+    <string name="sell">Sell</string>
+    <string name="delete">Delete</string>
+    <string name="item">Item</string>
+    <string name="quantity_in_stock">Quantity In Stock</string>
+    <string name="price">Price</string>
+    <string name="category">Category</string>
+    <string name="priority">Priority</string>
+    <string name="rating_info">%3.1f/ 5.0</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="attention">Attention</string>
+    <string name="delete_question">Are you sure you want to delete?</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="no_item_description">No items in list. Tap \"+\" to add an item.</string>
+    <string name="category_info">%s Category</string>
+    <plurals name="number_of_stars" tools:ignore="MissingQuantity">%d star</plurals>
 </resources>
