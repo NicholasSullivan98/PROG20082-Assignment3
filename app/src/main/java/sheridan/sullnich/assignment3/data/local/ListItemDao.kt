@@ -17,8 +17,6 @@ interface ListItemDao {
     @Query("SELECT * from listItems WHERE id = :id")
     fun getListItemByIdStream(id: Int): Flow<LocalListItem?>
 
-    // Specify the conflict strategy as IGNORE, when the user tries to add an
-    // existing Item into the database Room ignores the conflict.
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertListItem(listItem: LocalListItem)
 

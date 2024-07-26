@@ -1,7 +1,7 @@
 package sheridan.sullnich.assignment3.ui.common
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -13,9 +13,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import sheridan.sullnich.assignment3.R
 
-/**
- * App bar to display title and conditionally display the back navigation.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ItemListTopAppBar(
@@ -33,7 +30,7 @@ fun ItemListTopAppBar(
             if (canNavigateBack) {
                 IconButton(onClick = navigateUp) {
                     Icon(
-                        imageVector = Icons.Filled.ArrowBack,
+                        imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = stringResource(R.string.back_button)
                     )
                 }

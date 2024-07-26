@@ -20,7 +20,6 @@ fun CategoryInput(
     val conditions: Array<String> = stringArrayResource(R.array.itemList_category)
 
     AndroidView(
-        //modifier = Modifier.fillMaxWidth(),
         modifier = modifier,
         factory = { context ->
             Spinner(context).apply {

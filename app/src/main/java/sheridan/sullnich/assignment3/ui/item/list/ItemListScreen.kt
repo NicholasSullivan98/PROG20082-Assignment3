@@ -43,9 +43,6 @@ import sheridan.sullnich.assignment3.ui.item.model.toItemListItemModel
 import sheridan.sullnich.assignment3.ui.navigation.ItemListDestination
 import sheridan.sullnich.assignment3.ui.theme.Assignment3Theme
 
-/**
- * Entry route for Home screen
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable

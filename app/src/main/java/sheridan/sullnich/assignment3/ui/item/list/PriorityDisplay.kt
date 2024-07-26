@@ -1,7 +1,6 @@
 package sheridan.sullnich.assignment3.ui.item.list
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.MutatePriority
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
@@ -17,7 +16,6 @@ import sheridan.sullnich.assignment3.R
 fun PriorityDisplay(priority: Int, modifier: Modifier = Modifier) {
     val displayDescription = pluralStringResource(R.plurals.number_of_stars, count = priority)
     Row(
-        // Content description is added here to support accessibility
         modifier.semantics {
             contentDescription = displayDescription
         }

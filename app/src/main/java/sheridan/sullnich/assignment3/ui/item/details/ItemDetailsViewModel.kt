@@ -22,10 +22,6 @@ class ItemDetailsViewModel @Inject constructor(
 
     private val productId: Int = checkNotNull(savedStateHandle[ItemDetailsDestination.ITEM_ID_ARG])
 
-    /**
-     * Holds the item details ui state. The data is retrieved from [ListItemRepository] and mapped to
-     * the UI state.
-     */
     val uiState: StateFlow<ItemDetailsUiState> =
         listItemRepository.getListItemByIdStream(productId)
             .filterNotNull()
@@ -37,23 +33,6 @@ class ItemDetailsViewModel @Inject constructor(
                 initialValue = ItemDetailsUiState()
             )
 
-    /**
-     * Reduces the item quantity by one and update the [ListItemRepository]'s data source.
-     */
-    /*
-    fun reduceQuantityByOne() {
-        viewModelScope.launch {
-            val detailsModel = uiState.value.detailsModel
-            if (detailsModel.quantity > 0) {
-                productRepository.updateProductQuantityById(detailsModel.id, detailsModel.quantity - 1)
-            }
-        }
-    }
-     */
-
-    /**
-     * Deletes the item from the [ListItemRepository]'s data source.
-     */
     fun deleteListItem() = viewModelScope.launch{
         listItemRepository.deleteListItemById(uiState.value.detailsModel.id)
     }

@@ -1,12 +1,10 @@
 package sheridan.sullnich.assignment3.ui.item.form
 
-import android.app.TimePickerDialog
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.DatePicker
 import androidx.compose.material3.DatePickerDialog
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -28,7 +26,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import sheridan.sullnich.assignment3.R
 import sheridan.sullnich.assignment3.domain.Category
@@ -37,9 +34,7 @@ import sheridan.sullnich.assignment3.ui.common.formatTime
 import sheridan.sullnich.assignment3.ui.item.model.ListItemFormModel
 import sheridan.sullnich.assignment3.ui.theme.Assignment3Theme
 import java.util.Calendar
-import java.util.Currency
 import java.util.Date
-import java.util.Locale
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -56,7 +51,6 @@ fun ListItemForm(
     var showDatePicker by rememberSaveable { mutableStateOf(false) }
     var showTimePicker by rememberSaveable { mutableStateOf(false) }
 
-    // date picker component
     if (showDatePicker) {
         val day: Calendar = Calendar.getInstance().apply {
             timeInMillis = listItemFormModel.date.time
@@ -107,7 +101,6 @@ fun ListItemForm(
         }
     }
 
-    // time picker component
     if (showTimePicker) {
         val calendar: Calendar = Calendar.getInstance().apply { time = listItemFormModel.date }
         val timePickerState = rememberTimePickerState(
