@@ -76,7 +76,6 @@ fun ItemDetailsScreen(
     ) { innerPadding ->
         ItemDetailsBody(
             itemDetailsUiState = uiState.value,
-            //onSellProduct = { viewModel.reduceQuantityByOne() },
             onDelete = {
                 viewModel.deleteListItem()
                 navigateBack()
@@ -91,7 +90,6 @@ fun ItemDetailsScreen(
 @Composable
 private fun ItemDetailsBody(
     itemDetailsUiState: ItemDetailsUiState,
-    //onSellItem: () -> Unit,
     onDelete: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -103,16 +101,6 @@ private fun ItemDetailsBody(
         ItemDetails(
             detailsModel = itemDetailsUiState.detailsModel, modifier = Modifier.fillMaxWidth()
         )
-        /*
-        Button(
-            onClick = onSellItem,
-            modifier = Modifier.fillMaxWidth(),
-            shape = MaterialTheme.shapes.small,
-            enabled = !itemDetailsUiState.outOfStock
-        )  {
-            Text(stringResource(R.string.sell))
-        }
-         */
         OutlinedButton(
             onClick = { showConfirmationDialog = true },
             shape = MaterialTheme.shapes.small,

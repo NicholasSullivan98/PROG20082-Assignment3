@@ -211,7 +211,7 @@ fun HomeBodyPreview() {
     Assignment3Theme {
         ItemListBody(listOf(
             ListItem(1, "Walk Dog", "Take dog on 10 min walk").toItemListItemModel(),
-            ListItem(2, "Take out Trash", "Take trash out to the kerb", selected = true).toItemListItemModel(),
+            ListItem(2, "Take out Trash", "Take trash out to the kerb").toItemListItemModel(),
             ListItem(3, "Wash Car", "Do a through wash of the car").toItemListItemModel()
         ), onItemClick = {}, onToggleSelect = {})
     }

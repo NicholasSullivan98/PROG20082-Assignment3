@@ -8,6 +8,12 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
+import sheridan.sullnich.assignment3.ui.item.details.ItemDetailsScreen
+import sheridan.sullnich.assignment3.ui.item.details.ItemDetailsViewModel
+import sheridan.sullnich.assignment3.ui.item.edit.ListItemEditScreen
+import sheridan.sullnich.assignment3.ui.item.edit.ListItemEditViewModel
+import sheridan.sullnich.assignment3.ui.item.entry.ItemEntryScreen
+import sheridan.sullnich.assignment3.ui.item.entry.ItemEntryViewModel
 import sheridan.sullnich.assignment3.ui.item.list.ItemListScreen
 import sheridan.sullnich.assignment3.ui.item.list.ItemListViewModel
 
@@ -31,7 +37,6 @@ fun ItemListNavHost(
                 viewModel = viewModel
             )
         }
-        /*
         composable(route = ItemEntryDestination.route) {
             val viewModel: ItemEntryViewModel = hiltViewModel()
             ItemEntryScreen(
@@ -48,7 +53,7 @@ fun ItemListNavHost(
         ) {
             val viewModel: ItemDetailsViewModel = hiltViewModel()
             ItemDetailsScreen(
-                navigateToEditProduct = { navController.navigate("${ItemEditDestination.route}/$it") },
+                navigateToEditItem = { navController.navigate("${ItemEditDestination.route}/$it") },
                 navigateBack = { navController.navigateUp() },
                 viewModel = viewModel
             )
@@ -60,13 +65,12 @@ fun ItemListNavHost(
                 type = NavType.IntType
             })
         ) {
-            val viewModel: ItemEditViewModel = hiltViewModel()
-            ItemEditScreen(
+            val viewModel: ListItemEditViewModel = hiltViewModel()
+            ListItemEditScreen(
                 navigateBack = { navController.popBackStack() },
                 onNavigateUp = { navController.navigateUp() },
                 viewModel = viewModel
             )
         }
-         */
     }
 }

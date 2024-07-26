@@ -8,11 +8,10 @@
     <string name="sell">Sell</string>
     <string name="delete">Delete</string>
     <string name="item">Item</string>
-    <string name="quantity_in_stock">Quantity In Stock</string>
     <string name="price">Price</string>
     <string name="category">Category</string>
     <string name="priority">Priority</string>
-    <string name="rating_info">%3.1f/ 5.0</string>
+    <string name="rating_info">%3.1f/ 3.0</string>
     <string name="date">Date</string>
     <string name="time">Time</string>
     <string name="attention">Attention</string>
@@ -20,6 +19,15 @@
     <string name="no">No</string>
     <string name="yes">Yes</string>
     <string name="no_item_description">No items in list. Tap \"+\" to add an item.</string>
-    <string name="category_info">%s Category</string>
-    <plurals name="number_of_stars" tools:ignore="MissingQuantity">%d star</plurals>
+    <string name="category_info">Category: %s</string>
+    <string name="save_action">Save</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="listitem_name_req">List Item Title*</string>
+    <string name="listitem_description_req">List Item Description*</string>
+    <string name="required_fields">*Required fields</string>
+    <plurals name="number_of_stars">
+        <item quantity="one">%d star</item>
+        <item quantity="other">%d stars</item>
+    </plurals>
 </resources>
