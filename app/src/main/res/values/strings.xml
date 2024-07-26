@@ -24,7 +24,7 @@
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
     <string name="listitem_name_req">List Item Title*</string>
-    <string name="listitem_description_req">List Item Description*</string>
+    <string name="listitem_description_req">List Item Description</string>
     <string name="required_fields">*Required fields</string>
     <plurals name="number_of_stars">
         <item quantity="one">%d star</item>
